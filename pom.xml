@@ -23,7 +23,7 @@
     <version>7</version>
   </parent>
 
-  <groupId>net.ltgt.gwt.archetypes</groupId>
+  <groupId>de.sbsbraungardt.gwt.archetypes</groupId>
   <artifactId>gwt-maven-archetypes</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
@@ -59,18 +59,19 @@
 
   <modules>
     <module>modular-webapp</module>
+    <module>modular-gwtp-webapp</module>
     <module>modular-requestfactory</module>
     <module>guice-rf-activities</module>
   </modules>
 
   <scm>
-    <connection>scm:git:git://github.com/tbroyer/gwt-maven-archetypes.git</connection>
-    <developerConnection>scm:git:git@github.com:tbroyer/gwt-maven-archetypes.git</developerConnection>
-    <url>https://github.com/tbroyer/gwt-maven-archetypes</url>
+    <connection>scm:git:git://github.com/frankyb/gwt-maven-archetypes.git</connection>
+    <developerConnection>scm:git:git@github.com:frankyb/gwt-maven-archetypes.git</developerConnection>
+    <url>https://github.com/frankyb/gwt-maven-archetypes</url>
   </scm>
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/tbroyer/gwt-maven-archetypes/issues</url>
+    <url>https://github.com/frankyb/gwt-maven-archetypes/issues</url>
   </issueManagement>
 
   <properties>
