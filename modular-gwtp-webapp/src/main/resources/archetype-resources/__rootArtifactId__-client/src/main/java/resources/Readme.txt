@@ -1,0 +1,1 @@
+# Place for adding gwt resources #
