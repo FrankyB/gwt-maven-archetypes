@@ -1,1 +1,0 @@
-# Place for adding gwt i18n properties file actions #

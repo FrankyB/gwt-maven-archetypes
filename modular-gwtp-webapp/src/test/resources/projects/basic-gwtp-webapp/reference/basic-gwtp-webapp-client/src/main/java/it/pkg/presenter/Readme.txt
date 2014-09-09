@@ -1,1 +1,0 @@
-# Place for adding gwtp presenter/views #

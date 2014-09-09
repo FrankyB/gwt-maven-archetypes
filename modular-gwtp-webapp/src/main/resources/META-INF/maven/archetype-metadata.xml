@@ -42,6 +42,24 @@
             <include>**/*.xml</include>
           </includes>
         </fileSet>
+	    <fileSet filtered="true" encoding="UTF-8">
+	      <directory>src/main/action</directory>
+	    </fileSet>
+	    <fileSet filtered="true" encoding="UTF-8">
+	      <directory>src/main/event</directory>
+	    </fileSet>
+	    <fileSet filtered="true" encoding="UTF-8">
+	      <directory>src/main/i18n</directory>
+	    </fileSet>    
+	    <fileSet filtered="true" encoding="UTF-8">
+	      <directory>src/main/presenter</directory>
+	    </fileSet>
+	    <fileSet filtered="true" encoding="UTF-8">
+	      <directory>src/main/ressources</directory>
+	    </fileSet>
+	    <fileSet filtered="true" encoding="UTF-8">
+	      <directory>src/main/util</directory>
+	    </fileSet>
       </fileSets>
     </module>
     <module id="${rootArtifactId}-shared" dir="__rootArtifactId__-shared" name="${rootArtifactId}-shared">
