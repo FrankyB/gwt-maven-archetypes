@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-#set( $dollar = '$' )
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>${groupId}</groupId>
-	<artifactId>${artifactId}</artifactId>
-	<version>${version}</version>
+	<groupId>archetype.it</groupId>
+	<artifactId>basic-gwtp-webapp</artifactId>
+	<version>0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<prerequisites>
@@ -29,13 +27,13 @@
 			<dependency>
 				<groupId>com.google.gwt</groupId>
 				<artifactId>gwt-user</artifactId>
-				<version>${dollar}{gwt.version}</version>
+				<version>${gwt.version}</version>
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
 				<groupId>com.google.gwt</groupId>
 				<artifactId>gwt-servlet</artifactId>
-				<version>${dollar}{gwt.version}</version>
+				<version>${gwt.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>javax.servlet</groupId>
@@ -72,11 +70,11 @@
 					<artifactId>gwt-maven-plugin</artifactId>
 					<version>2.6.1</version>
 					<configuration>
-						<deploy>${dollar}{project.build.directory}/gwtc/extra</deploy>
-						<extra>${dollar}{project.build.directory}/gwtc/extra</extra>
-						<gen>${dollar}{project.build.directory}/gwtc/gen</gen>
+						<deploy>${project.build.directory}/gwtc/extra</deploy>
+						<extra>${project.build.directory}/gwtc/extra</extra>
+						<gen>${project.build.directory}/gwtc/gen</gen>
 						<!-- There's an issue on Mac: see http://code.google.com/p/google-web-toolkit/issues/detail?id=7474 
-							<workDir>${dollar}{project.build.directory}/gwtc/work</workDir> <codeServerWorkDir>${dollar}{project.build.directory}/gwtc/superDevMode</codeServerWorkDir> -->
+							<workDir>${project.build.directory}/gwtc/work</workDir> <codeServerWorkDir>${project.build.directory}/gwtc/superDevMode</codeServerWorkDir> -->
 					</configuration>
 					<executions>
 						<execution>
@@ -160,4 +158,9 @@
 			<version>${gin.version}</version>
 		</dependency>
 	</dependencies>
+  <modules>
+    <module>basic-gwtp-webapp-client</module>
+    <module>basic-gwtp-webapp-shared</module>
+    <module>basic-gwtp-webapp-server</module>
+  </modules>
 </project>

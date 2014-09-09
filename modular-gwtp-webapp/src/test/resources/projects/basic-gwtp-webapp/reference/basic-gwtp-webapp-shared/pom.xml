@@ -4,11 +4,11 @@
 
   <parent>
     <groupId>archetype.it</groupId>
-    <artifactId>basic-webapp</artifactId>
+    <artifactId>basic-gwtp-webapp</artifactId>
     <version>0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>basic-webapp-shared</artifactId>
+  <artifactId>basic-gwtp-webapp-shared</artifactId>
 
   <prerequisites>
     <maven>${mavenVersion}</maven>

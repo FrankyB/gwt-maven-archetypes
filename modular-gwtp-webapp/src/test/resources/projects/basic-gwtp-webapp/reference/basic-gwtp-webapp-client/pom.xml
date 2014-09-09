@@ -4,11 +4,11 @@
 
   <parent>
     <groupId>archetype.it</groupId>
-    <artifactId>basic-webapp</artifactId>
+    <artifactId>basic-gwtp-webapp</artifactId>
     <version>0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>basic-webapp-client</artifactId>
+  <artifactId>basic-gwtp-webapp-client</artifactId>
   <packaging>war</packaging>
 
   <prerequisites>
@@ -17,20 +17,20 @@
 
   <properties>
     <gwt.genParam>false</gwt.genParam>
-    <!-- keep in sync with basic-webapp-server -->
+    <!-- keep in sync with basic-gwtp-webapp-server -->
     <runTarget>http://localhost:8080/</runTarget>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>basic-webapp-shared</artifactId>
+      <artifactId>basic-gwtp-webapp-shared</artifactId>
       <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>basic-webapp-shared</artifactId>
+      <artifactId>basic-gwtp-webapp-shared</artifactId>
       <version>${project.version}</version>
       <classifier>sources</classifier>
       <scope>provided</scope>
@@ -47,7 +47,7 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>gwt-maven-plugin</artifactId>
         <configuration>
-          <module>it.pkg.Basic</module>
+          <module>it.pkg.BasicGwtp</module>
           <strict>true</strict>
           <genParam>${gwt.genParam}</genParam>
           <noserver>true</noserver>
@@ -109,7 +109,7 @@
                   <resources>
                     <!-- Only sources, resources are already in the classpath, by definition -->
                     <resource>
-                      <directory>${basedir}/../basic-webapp-shared/src/main/java</directory>
+                      <directory>${basedir}/../basic-gwtp-webapp-shared/src/main/java</directory>
                     </resource>
                   </resources>
                 </configuration>

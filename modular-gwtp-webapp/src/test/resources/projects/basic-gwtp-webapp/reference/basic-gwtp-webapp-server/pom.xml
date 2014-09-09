@@ -4,11 +4,11 @@
 
   <parent>
     <groupId>archetype.it</groupId>
-    <artifactId>basic-webapp</artifactId>
+    <artifactId>basic-gwtp-webapp</artifactId>
     <version>0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>basic-webapp-server</artifactId>
+  <artifactId>basic-gwtp-webapp-server</artifactId>
   <packaging>war</packaging>
 
   <prerequisites>
@@ -18,12 +18,12 @@
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>basic-webapp-shared</artifactId>
+      <artifactId>basic-gwtp-webapp-shared</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>basic-webapp-client</artifactId>
+      <artifactId>basic-gwtp-webapp-client</artifactId>
       <version>${project.version}</version>
       <type>war</type>
       <scope>runtime</scope>
@@ -56,9 +56,9 @@
                 <scanIntervalSeconds>1</scanIntervalSeconds>
                 <webApp>
                   <baseResource implementation="org.eclipse.jetty.util.resource.ResourceCollection">
-                    <resourcesAsCSV>src/main/webapp,${basedir}/../basic-webapp-client/target/basic-webapp-client-${project.version}/</resourcesAsCSV>
+                    <resourcesAsCSV>src/main/webapp,${basedir}/../basic-gwtp-webapp-client/target/basic-gwtp-webapp-client-${project.version}/</resourcesAsCSV>
                   </baseResource>
-                  <extraClasspath>${basedir}/../basic-webapp-shared/target/classes/</extraClasspath>
+                  <extraClasspath>${basedir}/../basic-gwtp-webapp-shared/target/classes/</extraClasspath>
                 </webApp>
                 <systemProperties>
                   <systemProperty>
